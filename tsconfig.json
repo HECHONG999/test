@@ -6,13 +6,16 @@
     "moduleResolution": "Node",
     "strict": true,
     "jsx": "preserve",
+    "sourceMap": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
-    "skipLibCheck": true,
-    "noEmit": true
+    "noEmit": true,
+    	// 跳过库检查，解决打包失败
+		"skipLibCheck": true
   },
+  "exclude": ["node_modules","dist","**/*.js"],
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
