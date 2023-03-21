@@ -1,7 +1,11 @@
 <script setup lang="ts"></script>
 
 <template>
-	<div>test</div>
+	<router-view> </router-view>
 </template>
 
-<style scoped></style>
+<style scoped>
+#app {
+	height: 100%;
+}
+</style>

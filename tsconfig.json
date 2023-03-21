@@ -4,7 +4,7 @@
     "useDefineForClassFields": true,
     "module": "ESNext",
     "moduleResolution": "Node",
-    "strict": true,
+    "strict": false,
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
@@ -12,10 +12,14 @@
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
     "noEmit": true,
-    	// 跳过库检查，解决打包失败
-		"skipLibCheck": true
+    // 跳过库检查，解决打包失败
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+			"@/*": ["src/*"]
+		},
   },
   "exclude": ["node_modules","dist","**/*.js"],
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  // "references": [{ "path": "./tsconfig.node.json" }]
 }
